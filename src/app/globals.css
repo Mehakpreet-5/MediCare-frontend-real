@@ -2,26 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* styles/globals.css */
+.chat-container {
+  width: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.messages {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 10px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.message {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.options {
+  margin-bottom: 10px;
+}
+
+.orangg{
+  background: #f38a59;
+}
+.orangg-text{
+  color: #eb804f;
+}
+.greenn{
+  background: #013837;
+}
+.textg{
+  color:#024443;
+}
+
+.yell{
+  background: #f8f7f1;
+}
+
+/* Hide scrollbar for webkit browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none; /* for Firefox */
 }
