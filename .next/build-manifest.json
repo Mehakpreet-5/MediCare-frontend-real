@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/KrXp_2X_9PNfj_CFZVzX2/_buildManifest.js",
-    "static/KrXp_2X_9PNfj_CFZVzX2/_ssgManifest.js"
+    "static/0X9m09MHB0a-o5nsGg_HZ/_buildManifest.js",
+    "static/0X9m09MHB0a-o5nsGg_HZ/_ssgManifest.js"
   ],
   "rootMainFiles": [
     "static/chunks/webpack-7f8a2205b5c2ce51.js",
@@ -114,7 +114,7 @@
       "static/css/c35863d076ce00a3.css",
       "static/chunks/pages/admin-10c779ab82dd81c6.js"
     ],
-    "/admin/appointments": [
+    "/admin/Appointments": [
       "static/chunks/webpack-7f8a2205b5c2ce51.js",
       "static/chunks/framework-70590a49159a791a.js",
       "static/chunks/main-90e1ce15f1931711.js",
@@ -122,7 +122,7 @@
       "static/chunks/2cca2479-3972b8e314ff5215.js",
       "static/chunks/956-6faf151bdef3fe51.js",
       "static/css/c35863d076ce00a3.css",
-      "static/chunks/pages/admin/appointments-a925f87c32244ce7.js"
+      "static/chunks/pages/admin/Appointments-eba169350046676b.js"
     ],
     "/admin/doctors": [
       "static/chunks/webpack-7f8a2205b5c2ce51.js",

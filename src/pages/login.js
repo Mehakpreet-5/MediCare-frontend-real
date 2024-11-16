@@ -116,7 +116,7 @@ import style from '../app/globals.css';
 import { useRouter } from "next/router";
 import Image from "next/image";
 import tool from '../app/assests/dr.png';
-
+import Link from "next/link";
 const LoginForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [loginMessage, setLoginMessage] = useState("");
@@ -213,9 +213,9 @@ const LoginForm = () => {
 
           <p className="mt-4 text-center text-gray-600">
             Don't have an account?{" "}
-            <a href="/signup" className="text-blue-500 hover:underline">
+            <Link href="/signup" className="text-blue-500 hover:underline">
               Sign up
-            </a>
+            </Link>
           </p>
         </form>
       </div>

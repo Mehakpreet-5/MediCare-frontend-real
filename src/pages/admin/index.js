@@ -64,7 +64,7 @@
 
 // pages/admin/index.js
 import dbConnect from '../../db';
-import Appointment from '../../models/Appointment.js';
+import Appointment from '../admin/Appointments.js';
 import Sidebar from './sidebar';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';

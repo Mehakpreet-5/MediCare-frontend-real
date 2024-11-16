@@ -1,6 +1,5 @@
 {
   "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/Appointment": "pages/Appointment.js",
   "/Booking": "pages/Booking.js",
   "/Doctors": "pages/Doctors.js",
@@ -8,11 +7,12 @@
   "/HomePage": "pages/HomePage.js",
   "/abboutt": "pages/abboutt.js",
   "/about": "pages/about.js",
-  "/admin/appointments": "pages/admin/appointments.js",
+  "/admin/Appointments": "pages/admin/Appointments.js",
   "/admin/doctors": "pages/admin/doctors.js",
-  "/admin/users": "pages/admin/users.js",
   "/admin/sidebar": "pages/admin/sidebar.js",
+  "/_error": "pages/_error.js",
   "/api/appoint": "pages/api/appoint.js",
+  "/admin/users": "pages/admin/users.js",
   "/api/book": "pages/api/book.js",
   "/api": "pages/api.js",
   "/api/login": "pages/api/login.js",
@@ -25,7 +25,7 @@
   "/meet/[id]": "pages/meet/[id].js",
   "/patientBooking": "pages/patientBooking.js",
   "/signup": "pages/signup.js",
-  "/_document": "pages/_document.js",
   "/api/socket": "pages/api/socket.js",
+  "/_document": "pages/_document.js",
   "/admin": "pages/admin.js"
 }
