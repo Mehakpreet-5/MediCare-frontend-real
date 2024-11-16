@@ -1,7 +1,6 @@
 // models/Appointment.js
 import Appointments from '@/pages/Appointment';
 import mongoose from 'mongoose';
-
 const AppointmentSchema = new mongoose.Schema({
   doctor: { type: String, required: true },
   patient: { type: String, required: true },
@@ -11,6 +10,6 @@ const AppointmentSchema = new mongoose.Schema({
   status: { type: String, default: 'Pending' },
 }, { timestamps: true });
 
- const Appointment = mongoose.models.Appointment || mongoose.model('Appointment', AppointmentSchema);
+export default mongoose.models.Appointment || mongoose.model('Appointment', AppointmentSchema);
 
- export default Appointment
+//  export default Appointment
