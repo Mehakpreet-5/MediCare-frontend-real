@@ -1,6 +1,6 @@
 // pages/api/appointments/index.js
 import dbConnect from '../../db.js';
-import Appointment from '../../models/Appointment';
+import Appointment from '../../models/Appointment.js';
 
 export default async function handler(req, res) {
   await dbConnect();
