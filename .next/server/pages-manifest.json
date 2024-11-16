@@ -2,10 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/login": "pages/login.js",
-  "/admin": "pages/admin.js",
-  "/admin/appointments": "pages/admin/appointments.js",
-  "/api/book": "pages/api/book.js",
+  "/confirmation": "pages/confirmation.js",
   "/Appointment": "pages/Appointment.js",
-  "/confirmation": "pages/confirmation.js"
+  "/Booking": "pages/Booking.js"
 }
