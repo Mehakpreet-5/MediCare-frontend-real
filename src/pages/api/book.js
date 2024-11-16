@@ -38,7 +38,7 @@
 //     return Math.random().toString(36).substr(2, 9); // Simple ID generation
 // }
 
-import dbConnect from '../../db';
+import dbConnect from '../../db.js';
 import Booking from '../../models/Booking';
 
 export default async function handler(req, res) {
