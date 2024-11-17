@@ -84,7 +84,7 @@ const Appointments = () => {
             <div className=' hidden sm:block md:block absolute  h-[28rem] w-[28rem]  orangg rounded-full z-0 right-0'></div>
 
             <div className=' hidden sm:block md:block absolute h-[27rem] w-[27rem] mr-2 rounded-full overflow-hidden shadow-lg '>
-              <Image src={doctorbgg} alt="Doctor" className="h-full w-full object-cover" />
+              <Image src={doctorbgg} alt="Description of the image" className="h-full w-full object-cover" />
             </div>
 
             <div className=' hidden sm:block md:block absolute mt-72 mr-72 h-[14.5rem] w-[14.5rem]  orangg rounded-full clip-half z-0 right-0'></div>
@@ -94,7 +94,7 @@ const Appointments = () => {
             </div>
           </div>
 
-          <Image src={icon2} className="absolute inset-0 w-36 h-32 opacity-50 md:ml-16 mt-28" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
+          <Image src={icon2} alt="Description of the image" className="absolute inset-0 w-36 h-32 opacity-50 md:ml-16 mt-28" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
 
           <div className='mt-48 ml-20 md:ml-52 py-10 absolute inset-0'
             data-aos="fade-down" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1100">

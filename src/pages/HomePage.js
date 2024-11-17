@@ -16,7 +16,7 @@ function Home() {
     <>
       <div className='flex flex-col lg:flex-row lg:h-5/6 greenn'>
         {/* Animate Icon */}
-        <Image src={icon2} className="relative w-28 h-28 opacity-50 ml-10 mt-10" data-aos="zoom-in"  data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
+        <Image src={icon2}  alt="A friendly doctor background image"  className="relative w-28 h-28 opacity-50 ml-10 mt-10" data-aos="zoom-in"  data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
         
         <div className='flex flex-col lg:flex-row space-x-20 mt-7 ml-10 mr-1 pb-10 md:pb-0'>
           <div className='flex flex-col items-center justify-center pt-0 md:pt-20 lg:pt-20 px-4 w-full lg:w-4/6'>

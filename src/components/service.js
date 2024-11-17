@@ -37,7 +37,7 @@ const ServicePage = () => {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
         <div className="mt-16 px-3 w-full md:w-80">
           <h1 className="text-orange-300 font-serif text-2xl">Medical Services</h1>
-          <h2 className="text-gray-800 font-serif text-4xl">We're Providing Best Services.</h2>
+          <h2 className="text-gray-800 font-serif text-4xl">We&apos;re Providing Best Services.</h2>
         </div>
 
         {services.map((service, index) => (

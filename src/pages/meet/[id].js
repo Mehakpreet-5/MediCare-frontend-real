@@ -118,26 +118,86 @@
 
 // export default RoomPage;
 
+// import React, { useRef, useEffect } from 'react';
+// import { useRouter } from 'next/router'; 
+// import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+
+// function RoomPage() {
+//     const router = useRouter();
+//     const meetingRef = useRef(null);
+//     const { id } = router.query; // Change here to access 'id' instead of 'roomID'
+
+//     useEffect(() => {
+
+//         if (!router.isReady || !id) return;
+//         console.log('Router Query:', router.query); // Log the router query
+
+//         const appID = 1142151151;
+//         const serverSecret = "43503583b71f1c2a65eff5972c8aef53";
+//         const userID = Date.now().toString(); // Unique user ID
+
+//         // Ensure id is defined before proceeding
+//         if (!id) {
+//             console.error('Room ID is not available');
+//             return; // Early return if id is not defined
+//         }
+
+//         const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, id, userID, "User1");
+//         const zc = ZegoUIKitPrebuilt.create(kitToken);
+//         zc.joinRoom({
+//             container: meetingRef.current,
+//             scenario: { mode: ZegoUIKitPrebuilt.GroupCall },
+//             sharedLinks: [{ name: 'Copy Link', url: `${window.location.origin}/room/${id}` }]
+//         });
+
+//     }, [id, router.isReady]); // Run when id changes
+
+//     const copyRoomId = () => {
+//         if (id) {
+//             navigator.clipboard.writeText(id);
+//             alert(`Room ID: ${id} copied to clipboard!`);
+//         } else {
+//             alert('Room ID is not available to copy!');
+//         }
+//     };
+
+//     return (
+//         <div className="relative w-full h-screen">
+//             <div ref={meetingRef} className='h-full'></div>
+//             {/* <button onClick={copyRoomId} className="absolute top-4 left-4 p-2 bg-blue-500 text-white rounded">Copy Room ID</button> */}
+//             {id && ( // Only show this if id is available
+//                 <div className="absolute bottom-4 left-4 text-white">
+//                     <p>Share this Room ID: <strong>{id}</strong></p>
+//                 </div>
+//             )}
+//         </div>
+//     );
+// }
+
+// export default RoomPage;
+
+
 import React, { useRef, useEffect } from 'react';
 import { useRouter } from 'next/router'; 
-import { ZegoUIKitPrebuilt } from "@zegocloud/zego-uikit-prebuilt";
+import dynamic from 'next/dynamic';
+
+const ZegoUIKitPrebuilt = dynamic(() => import('@zegocloud/zego-uikit-prebuilt'), { ssr: false });
 
 function RoomPage() {
     const router = useRouter();
     const meetingRef = useRef(null);
-    const { id } = router.query; // Change here to access 'id' instead of 'roomID'
+    const { id } = router.query; // Access 'id' from router.query
 
     useEffect(() => {
-        console.log('Router Query:', router.query); // Log the router query
+        if (!router.isReady || !id) return;
 
         const appID = 1142151151;
         const serverSecret = "43503583b71f1c2a65eff5972c8aef53";
         const userID = Date.now().toString(); // Unique user ID
 
-        // Ensure id is defined before proceeding
         if (!id) {
             console.error('Room ID is not available');
-            return; // Early return if id is not defined
+            return;
         }
 
         const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, id, userID, "User1");
@@ -148,7 +208,7 @@ function RoomPage() {
             sharedLinks: [{ name: 'Copy Link', url: `${window.location.origin}/room/${id}` }]
         });
 
-    }, [id]); // Run when id changes
+    }, [id, router.isReady]);
 
     const copyRoomId = () => {
         if (id) {
@@ -162,8 +222,7 @@ function RoomPage() {
     return (
         <div className="relative w-full h-screen">
             <div ref={meetingRef} className='h-full'></div>
-            {/* <button onClick={copyRoomId} className="absolute top-4 left-4 p-2 bg-blue-500 text-white rounded">Copy Room ID</button> */}
-            {id && ( // Only show this if id is available
+            {id && (
                 <div className="absolute bottom-4 left-4 text-white">
                     <p>Share this Room ID: <strong>{id}</strong></p>
                 </div>
@@ -172,4 +231,4 @@ function RoomPage() {
     );
 }
 
-export default RoomPage;
+export default RoomPage; // Ensure you are exporting the component correctly

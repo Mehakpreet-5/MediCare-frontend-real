@@ -169,7 +169,7 @@ const Faqs = () => {
 
       <div className="h-56 greenn flex flex-col items-center justify-center text-center shadow-md">
         <h2 className="text-6xl font-serif font-semibold text-orange-200" data-aos="fade-down">
-          FAQ's
+        FAQ&apos;s
         </h2>
         <h3 className='text-orange-200 text-center mt-3 text-lg space-x-1' data-aos="fade-down"  data-aos-delay="" data-aos-easing="ease-in-out" data-aos-duration="300">
          <Link href='/' className='text-orange-200'>Home</Link>

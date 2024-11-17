@@ -22,7 +22,7 @@ const Comments = () => {
         }, 5000); // Change comments every 5 seconds
 
         return () => clearInterval(interval);
-    }, []);
+    }, [commentData.length]);
 
     // Calculate the starting index for the current set of comments to display
     const startIndex = currentIndex * 3;

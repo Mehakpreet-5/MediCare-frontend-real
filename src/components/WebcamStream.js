@@ -29,7 +29,7 @@ const WebcamStream = () => {
         stream.getTracks().forEach((track) => track.stop());
       }
     };
-  }, []);
+  }, [stream]);
 
   const toggleVideo = () => {
     setIsVideoOn((prev) => {
