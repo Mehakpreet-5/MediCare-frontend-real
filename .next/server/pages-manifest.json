@@ -20,12 +20,12 @@
   "/api/users": "pages/api/users.js",
   "/app": "pages/app.js",
   "/confirmation": "pages/confirmation.js",
-  "/meet": "pages/meet.js",
   "/login": "pages/login.js",
+  "/meet": "pages/meet.js",
   "/meet/[id]": "pages/meet/[id].js",
   "/patientBooking": "pages/patientBooking.js",
   "/signup": "pages/signup.js",
-  "/api/socket": "pages/api/socket.js",
   "/admin": "pages/admin.js",
+  "/api/socket": "pages/api/socket.js",
   "/_document": "pages/_document.js"
 }
