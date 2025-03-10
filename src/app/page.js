@@ -12,6 +12,7 @@ import App from "@/components/page-app";
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import FAQ from "@/components/fandq";
 export default function Home() {
    // Initialize AOS
    useEffect(() => {
@@ -25,12 +26,14 @@ export default function Home() {
       <Navbar/>
       <Homepage/>
       <About />
+      <ServicePage/>
+      <App/>
     <div className="">   
-         <h1 className="text-5xl font-bold text-center bg-orange-200 bg-opacity-20 pb-10 pt-20 textg font-serif">Our Doctors</h1>
+         <h1 className="text-5xl lg:text-6xl  font-bold text-center bg-orange-200 bg-opacity-20 pb-0 pt-40 textg font-serif">Our Doctors</h1>
          <Doctor />
     </div> 
-  <App/>
-    <ServicePage/>
+
+    <FAQ/>
  <Comments/>
 
 <Footer/>

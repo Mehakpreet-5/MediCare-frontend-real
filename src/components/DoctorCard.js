@@ -1,5 +1,119 @@
 
 
+// "use client";
+// import Link from 'next/link';
+// import Image from 'next/image';
+// import { useState } from 'react';
+// import doctorData from '../list'; // Import the doctor data
+
+// function Doctors() {
+//   const [selectedCategory, setSelectedCategory] = useState('Physician');
+
+//   const handleCategoryClick = (category) => {
+//     setSelectedCategory(category === selectedCategory ? null : category);
+//   };
+
+//   const selectedCategoryData = doctorData.find(category => category.category === selectedCategory);
+
+//   return (
+//     <div className="lg:p-4 bg-orange-200 bg-opacity-20">
+
+// <div
+//         className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:flex lg:flex-wrap justify-center gap-8 p-4"
+//       >
+//         {doctorData.map((categoryData, index) => (
+//           <div key={index} className="flex flex-col items-center">
+//             <div
+//               className={`w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex items-center justify-center rounded-full border border-gray-400 bg-white shadow-md transition transform duration-300 cursor-pointer hover:scale-105
+//               ${selectedCategory === categoryData.category ? "border-yellow-500 shadow-lg" : ""}`}
+//               onClick={() => handleCategoryClick(categoryData.category)}
+//             >
+//               <Image
+//                 src={categoryData.image}
+//                 alt={categoryData.category}
+//                 width={50}
+//                 height={50}
+//                 className="rounded-full w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
+//               />
+//             </div>
+//             <p className="text-xs sm:text-sm mt-2 font-medium text-gray-700">{categoryData.category}</p>
+//           </div>
+//         ))}
+//       </div>
+
+//       {selectedCategoryData && (
+//       <div
+//           className="mt-16 px-4 md:px-14 mb-10 lg:ml-24"
+//          data-aos="fade-up"
+//         data-aos-delay="200"
+//         data-aos-easing="ease-in-out"
+//         data-aos-duration="1200">
+//       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+//         {selectedCategoryData.doctors.map((doctor, docIndex) => (
+//           <li
+//             key={docIndex}
+//             className="bg-white bg-opacity-90 h-60 lg:h-auto min-w-80 lg:max-w-md p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+//           >
+//             <div className="flex lg:flex-row  lg:items-center lg:space-x-6 space-y-4 lg:space-y-0">
+//               <Image
+//                 src={doctor.image || '/default-doctor-image.jpg'}
+//                 alt={doctor.name}
+//                 width={120}
+//                 height={120}
+//                 className="w-32 h-40 lg:w-36 lg:h-44 rounded-lg object-cover shadow-md"
+//               />
+//               <div className="flex-1 ml-5  lg:ml-0 lg:text-left">
+//                 <h3 className="text-lg lg:text-xl font-semibold text-gray-800 ">
+//                   {doctor.name}
+//                 </h3>
+//                 <p className="text-sm lg:text-base text-gray-600 mt-1">
+//                   <strong>Specialization:</strong> {doctor.specialization}
+//                 </p>
+//                 <p className="text-sm lg:text-base text-gray-600">
+//                   <strong>Experience:</strong> {doctor.experience}
+//                 </p>
+//                 <p className="text-sm lg:text-base text-gray-600">
+//                   <strong>Availability:</strong> {doctor.availability}
+//                 </p>
+//               </div>
+//               <Link
+//                 href={{
+//                   pathname: '/Booking',
+//                   query: {
+//                     doctorImg: doctor.image,
+//                     doctorName: doctor.name,
+//                     specialization: doctor.specialization,
+//                     experience: doctor.experience,
+//                     availability: doctor.availability,
+//                   },
+//                 }}
+//               >
+//                   <h2
+//                       className='rounded-full border border-gray-500 px-2  mt-44 lg:mt-40 bg-orange-100 hover:bg-orange-200 cursor-pointer 
+//                       active:bg-orange-300 active:scale-95 text-2xl pb-1'
+//                     >
+//                       +
+//                     </h2>
+//                 {/* <button
+//                   className="mt-4 lg:mt-40 bg-yellow-500 hover:bg-yellow-600 text-white font-medium px-4 py-2 rounded-full shadow-md 
+//                   transform active:scale-95 transition duration-150"
+//                 >
+//                   Book
+//                 </button> */}
+//               </Link>
+//             </div>
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+    
+//       )}
+//     </div>
+//   );
+// }
+
+// export default Doctors;
+
 "use client";
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,66 +130,69 @@ function Doctors() {
   const selectedCategoryData = doctorData.find(category => category.category === selectedCategory);
 
   return (
-    <div className="p-10 bg-orange-200 bg-opacity-20">
-
-      <div className="flex flex-wrap justify-center space-x-8 mb-8" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="700">
+    <div className="lg:p-4 pt-10 lg:pt-0 bg-orange-200 bg-opacity-20">
+      <div
+        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:flex lg:flex-wrap justify-center gap-8 p-4"
+      >
         {doctorData.map((categoryData, index) => (
           <div key={index} className="flex flex-col items-center">
             <div
-              className={`text-2xl font-semibold cursor-pointer transition duration-300 ease-in-out border
-               border-gray-600 rounded-full px-2 lg:py-2 text-center w-24 h-20 bg-gradient-to-r from-cyan-100 to-white mb-2
-              ${selectedCategory === categoryData.category ? ' text-yellow-500 shadow-lg shadow-yellow-300 ' : 'text-gray-800'}`}
-              onClick={() => handleCategoryClick(categoryData.category)} 
+              className={`w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex items-center justify-center rounded-full border border-gray-400 bg-white shadow-md transition transform duration-300 cursor-pointer hover:scale-105
+              ${selectedCategory === categoryData.category ? "border-yellow-500 shadow-lg" : ""}`}
+              onClick={() => handleCategoryClick(categoryData.category)}
             >
-              {/* Category Image */}
               <Image
-                src={categoryData.image} // Use the image from the data
+                src={categoryData.image}
                 alt={categoryData.category}
-                width={70} // Set desired width
-                height={80} // Set desired height
-                className="inline-block mr-2 rounded-full p-1" // Optional styling
+                width={50}
+                height={50}
+                className="rounded-full w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20"
               />
             </div>
-            {categoryData.category}
+            <p className="text-xs sm:text-sm mt-2 font-medium text-gray-700">{categoryData.category}</p>
           </div>
         ))}
       </div>
-
       {selectedCategoryData && (
-        <div className="mt-20 px-4 md:px-14 mb-10 ml-10" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1200">
-          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="mt-16 px-4 md:px-6 mb-10 lg:ml-24" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1200">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {selectedCategoryData.doctors.map((doctor, docIndex) => (
-              <li key={docIndex} className="bg-white bg-opacity-35 w-full sm:w-96 p-6 rounded-lg shadow-md">
-                <div className="flex items-center space-x-4">
+              <li key={docIndex} className="bg-white bg-opacity-90 min-w-full sm:min-w-80 lg:max-w-md p-4 sm:p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <div className="flex flex-row  items-start sm:space-x-6 lg:space-y-4 space-y-0">
                   <Image
                     src={doctor.image || '/default-doctor-image.jpg'}
                     alt={doctor.name}
                     width={100}
                     height={100}
-                    className="w-24 h-24 rounded-full object-cover border-2 border-yellow-500"
+                    className="w-28 h-36 sm:w-32 sm:h-40 lg:w-36 lg:h-44 rounded-lg object-cover shadow-md"
                   />
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-800">{doctor.name}</h3>
-                    <p>Specialization: {doctor.specialization}</p>
-                    <p>Experience: {doctor.experience}</p>
-                    <p>Availability: {doctor.availability}</p>
+                  <div className="flex-1 ml-3 lg:ml-0 sm:text-left">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
+                      {doctor.name}
+                    </h3>
+                    <p className="text-sm sm:text-base text-gray-600 mt-1">
+                      <strong>Specialization:</strong> {doctor.specialization}
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-600">
+                      <strong>Experience:</strong> {doctor.experience}
+                    </p>
+                    <p className="text-sm sm:text-base text-gray-600">
+                      <strong>Availability:</strong> {doctor.availability}
+                    </p>
                   </div>
                   <Link
                     href={{
                       pathname: '/Booking',
                       query: {
-                        doctorImg : doctor.image,
+                        doctorImg: doctor.image,
                         doctorName: doctor.name,
                         specialization: doctor.specialization,
                         experience: doctor.experience,
                         availability: doctor.availability,
-                      }
+                      },
                     }}
                   >
-                    <h2
-                      className='rounded-full border border-gray-500 px-2 mt-28 bg-yellow-50 hover:bg-yellow-100 cursor-pointer 
-                      active:bg-yellow-300 active:scale-95'
-                    >
+                    <h2 className='rounded-full border border-gray-500 px-2 lg:px-3 py-0 lg:py-1 mt-28 lg:mt-32 bg-orange-100 hover:bg-orange-200 cursor-pointer active:bg-orange-300 active:scale-95 text-xl sm:text-2xl'>
                       +
                     </h2>
                   </Link>

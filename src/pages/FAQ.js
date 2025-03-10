@@ -1,11 +1,11 @@
 
+
 // "use client"
-// import React, { useState } from 'react';
+// import React, { useState, useEffect } from 'react';
 // import Navbar from '@/components/Navbar';
+// import style from '../app/globals.css';
 // import Link from 'next/link';
-// import style from '../app/globals.css'
 // import Footer from '@/components/Footer';
-// import { useEffect } from 'react';
 // import AOS from 'aos';
 // import 'aos/dist/aos.css';
 
@@ -52,51 +52,72 @@
 //   }
 // ];
 
+
 // const Faqs = () => {
 //   const [activeIndex, setActiveIndex] = useState(null);
 
 //   const toggleFAQ = (index) => {
-//     setActiveIndex(activeIndex === index ? null : index);
+//     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
 //   };
 
-//      // Initialize AOS
-//      useEffect(() => {
-//       AOS.init({ duration: 1000 });
-//     }, []);
+//   useEffect(() => {
+//     AOS.init({ duration: 1000 });
+//   }, []);
+
 //   return (
-//     <div className="bg-orange-50 bg-opacity-80 min-h-screen ">
+//     <div className="bg-orange-50 bg-opacity-80 min-h-screen">
 //       <Navbar />
-//       <div className='h-56 greenn text-center ' >
-//         <h2 className='text-5xl pt-16 font-serif text-orange-200' data-aos="fade-down"  data-aos-delay="" data-aos-easing="ease-in-out" data-aos-duration="300">FAQ's</h2>
+
+//       <div className="h-56 greenn flex flex-col items-center justify-center text-center shadow-md">
+//         <h2 className="text-6xl font-serif font-semibold text-orange-200" data-aos="fade-down">
+//         FAQ&apos;s
+//         </h2>
 //         <h3 className='text-orange-200 text-center mt-3 text-lg space-x-1' data-aos="fade-down"  data-aos-delay="" data-aos-easing="ease-in-out" data-aos-duration="300">
-//           <Link href='/' className='text-orange-200'>Home</Link>
-//           <span className='text-white'> / </span>
+//          <Link href='/' className='text-orange-200'>Home</Link>
+//            <span className='text-white'> / </span>
 //           <span className='text-orange-200'>Pages</span>
-//           <span className='text-white'> / </span>
-//           <span className='text-white'>FAQ</span>
-//         </h3>
+//            <span className='text-white'> / </span>
+//            <span className='text-white'>FAQ</span>
+//          </h3>
 //       </div>
-//       <div className="container mx-auto px-4 mt-20 ml-72  mb-40 w-8/12 "  data-aos="fade-up"  data-aos-delay="600" data-aos-easing="ease-in-out" data-aos-duration="300">
-//         <dl className="space-y-6 grid grid-cols-1 md:grid-cols-2">
+
+//       <div className="container mx-auto px-6 md:px-16 lg:px-32 mt-16  mb-40" data-aos="fade-up">
+//         <dl className="grid gap-8 md:grid-cols-2 lg:gap-12 w-11/12 ml-10">
 //           {faqsData.map((faq, index) => (
-//             <div key={index} className="border-b pb-4 ">
-//               <dt className="text-lg font-medium leading-6 text-gray-800 cursor-pointer" onClick={() => toggleFAQ(index)}>
-//                 <span className="mr-2">{activeIndex === index ? '−' : '+'}</span>
+//             <div
+//               key={index}
+//               className="p-6 bg-white bg-opacity-50 border border-gray-200 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+//             >
+//               <dt
+//                 className="flex justify-between items-center text-lg font-semibold text-gray-800 cursor-pointer"
+//                 onClick={() => toggleFAQ(index)}
+//               >
 //                 {faq.question}
+//                 <span
+//                   className={`text-2xl transform transition-transform duration-300 ${
+//                     activeIndex === index ? "rotate-45 text-orange-500" : "rotate-0 text-gray-400"
+//                   }`}
+//                 >
+//                   {activeIndex === index ? "−" : "+"}
+//                 </span>
 //               </dt>
 //               {activeIndex === index && (
-//                 <dd className="mt-2 text-gray-600 w-96">{faq.answer}</dd>
+//                 <dd className="mt-3 text-gray-600 leading-relaxed transition-all duration-500 ease-in-out">
+//                   {faq.answer}
+//                 </dd>
 //               )}
 //             </div>
 //           ))}
 //         </dl>
 //       </div>
+
 //       <Footer />
 //     </div>
 //   );
 // };
 
 // export default Faqs;
+
 
 
 "use client"
@@ -167,11 +188,11 @@ const Faqs = () => {
     <div className="bg-orange-50 bg-opacity-80 min-h-screen">
       <Navbar />
 
-      <div className="h-56 greenn flex flex-col items-center justify-center text-center shadow-md">
+      <div className="h-60 greenn flex flex-col items-center justify-center text-center shadow-md">
         <h2 className="text-6xl font-serif font-semibold text-orange-200" data-aos="fade-down">
         FAQ&apos;s
         </h2>
-        <h3 className='text-orange-200 text-center mt-3 text-lg space-x-1' data-aos="fade-down"  data-aos-delay="" data-aos-easing="ease-in-out" data-aos-duration="300">
+        <h3 className='text-orange-200 text-center mt-3 text-lg lg:text-xl space-x-1' data-aos="fade-down"  data-aos-delay="" data-aos-easing="ease-in-out" data-aos-duration="300">
          <Link href='/' className='text-orange-200'>Home</Link>
            <span className='text-white'> / </span>
           <span className='text-orange-200'>Pages</span>
@@ -181,7 +202,7 @@ const Faqs = () => {
       </div>
 
       <div className="container mx-auto px-6 md:px-16 lg:px-32 mt-16  mb-40" data-aos="fade-up">
-        <dl className="grid gap-8 md:grid-cols-2 lg:gap-12 w-11/12 ml-10">
+        <dl className="grid gap-8 md:grid-cols-2 lg:gap-12 w-11/12 lg:ml-10 ml-5">
           {faqsData.map((faq, index) => (
             <div
               key={index}

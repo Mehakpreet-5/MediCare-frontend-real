@@ -92,3 +92,12 @@
 // };
 
 // export default MeetingPage;
+
+const RoommPage = () => {
+    return(
+        <div>hi</div>
+    )
+}
+
+
+export default RoommPage;

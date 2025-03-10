@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 /* styles/globals.css */
+
+
+
 .chat-container {
   width: 400px;
   border: 1px solid #ccc;
@@ -43,6 +46,9 @@
   background: #f8f7f1;
 }
 
+.yelll{
+  background: #f8f7f4;
+}
 /* Hide scrollbar for webkit browsers */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
