@@ -74,7 +74,7 @@ function UsersPage() {
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const res = await fetch('http://localhost:5000/api/users');
+        const res = await fetch('https://medicare-backend-ve06.onrender.com/api/users');
 
         // Check if the request was successful
         if (!res.ok) {
@@ -103,7 +103,7 @@ function UsersPage() {
         throw new Error('Invalid ID format');
       }
   
-      const res = await fetch(`http://localhost:5000/api/users/${id}`, {
+      const res = await fetch(`https://medicare-backend-ve06.onrender.com/api/users/${id}`, {
         method: 'DELETE',  // Ensure DELETE method is used
       });
   

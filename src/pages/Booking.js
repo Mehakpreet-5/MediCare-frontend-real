@@ -195,7 +195,7 @@ function Booking() {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/api/appoint', {
+            const response = await fetch('https://medicare-backend-ve06.onrender.com/api/appoint', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

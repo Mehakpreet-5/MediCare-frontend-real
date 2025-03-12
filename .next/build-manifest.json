@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/2gpgJFTK5qGIzqUXufu1_/_buildManifest.js",
-    "static/2gpgJFTK5qGIzqUXufu1_/_ssgManifest.js"
+    "static/5qoun71KoccTwMu9v6Uxy/_buildManifest.js",
+    "static/5qoun71KoccTwMu9v6Uxy/_ssgManifest.js"
   ],
   "rootMainFiles": [
     "static/chunks/webpack-7f8a2205b5c2ce51.js",
@@ -26,7 +26,7 @@
       "static/chunks/675-93e32e1eeb5a29d4.js",
       "static/css/887246b08af35521.css",
       "static/chunks/554-c39d6b873843fed7.js",
-      "static/chunks/pages/Appointment-72401cc4b6f6c601.js"
+      "static/chunks/pages/Appointment-1bcf0188775390ff.js"
     ],
     "/Booking": [
       "static/chunks/webpack-7f8a2205b5c2ce51.js",
@@ -37,7 +37,7 @@
       "static/chunks/603-cd5cf28f6f9948a1.js",
       "static/chunks/675-93e32e1eeb5a29d4.js",
       "static/css/887246b08af35521.css",
-      "static/chunks/pages/Booking-49fec73d3c8f2210.js"
+      "static/chunks/pages/Booking-40c2144d54ebea8f.js"
     ],
     "/Doctors": [
       "static/chunks/webpack-7f8a2205b5c2ce51.js",
@@ -133,7 +133,7 @@
       "static/chunks/664-97b97c155d14b118.js",
       "static/chunks/603-cd5cf28f6f9948a1.js",
       "static/css/887246b08af35521.css",
-      "static/chunks/pages/admin/appointments-46fbd5a879276be6.js"
+      "static/chunks/pages/admin/appointments-f1b36cbcd00a8b24.js"
     ],
     "/admin/doctors": [
       "static/chunks/webpack-7f8a2205b5c2ce51.js",
@@ -167,7 +167,7 @@
       "static/chunks/664-97b97c155d14b118.js",
       "static/chunks/603-cd5cf28f6f9948a1.js",
       "static/css/887246b08af35521.css",
-      "static/chunks/pages/admin/users-d59a5895e1d67f82.js"
+      "static/chunks/pages/admin/users-951cd4190a10a9e3.js"
     ],
     "/app": [
       "static/chunks/webpack-7f8a2205b5c2ce51.js",
@@ -194,7 +194,7 @@
       "static/chunks/675-93e32e1eeb5a29d4.js",
       "static/chunks/998-50db624f004a3bc6.js",
       "static/css/887246b08af35521.css",
-      "static/chunks/pages/login-2e115c6b77698563.js"
+      "static/chunks/pages/login-4ffa73b7864466fa.js"
     ],
     "/meet": [
       "static/chunks/webpack-7f8a2205b5c2ce51.js",
@@ -225,7 +225,7 @@
       "static/chunks/675-93e32e1eeb5a29d4.js",
       "static/chunks/998-50db624f004a3bc6.js",
       "static/css/887246b08af35521.css",
-      "static/chunks/pages/signup-521a22f74bc3b127.js"
+      "static/chunks/pages/signup-101b0952ecf758c3.js"
     ]
   },
   "ampFirstPages": []

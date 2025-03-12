@@ -45,7 +45,9 @@ function Appointments() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5000/api/bookings', {
+            // const response = await fetch('http://localhost:5000/api/bookings', {
+                const response = await fetch('https://medicare-backend-ve06.onrender.com/api/bookings', {
+
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData), // Make sure formData has the correct structure
@@ -67,7 +69,8 @@ function Appointments() {
     
     const handleCancel = async (id) => {
         try {
-            await fetch(`http://localhost:5000/api/bookings/${id}`, {
+            // await fetch(`http://localhost:5000/api/bookings/${id}`, {
+                await fetch(`https://medicare-backend-ve06.onrender.com/api/bookings/${id}`, {
                 method: 'DELETE',
             });
             fetchBookings(); // Refresh bookings after deletion

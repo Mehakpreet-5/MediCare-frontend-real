@@ -215,7 +215,7 @@ const Appointments = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/bookings');// Ensure this is the correct endpoint
+        const response = await fetch('https://medicare-backend-ve06.onrender.com/api/bookings');// Ensure this is the correct endpoint
         const data = await response.json();
         if (response.ok) {
           const appointmentsWithIds = data.map(appointment => ({
@@ -248,7 +248,7 @@ const Appointments = () => {
 
   const handleCancel = async (id) => {
     try {
-      await fetch(`http://localhost:5000/api/bookings?id=${id}`, {
+      await fetch(`https://medicare-backend-ve06.onrender.com/api/bookings?id=${id}`, {
         method: 'DELETE',
       });
 
