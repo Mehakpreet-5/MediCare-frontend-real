@@ -14,7 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@jitsi/react-sdk": "^1.4.0",
-    "@zegocloud/zego-uikit-prebuilt": "^2.11.1",
+    "@zegocloud/zego-uikit-prebuilt": "^2.14.3-beta",
     "aos": "^2.3.4",
     "bcryptjs": "^2.4.3",
     "chart.js": "^4.4.6",

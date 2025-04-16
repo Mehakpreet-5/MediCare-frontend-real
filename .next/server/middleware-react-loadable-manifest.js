@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"pages\\\\meet\\\\[id].js -> @zegocloud/zego-uikit-prebuilt":{"id":2236,"files":[]}}';
+self.__REACT_LOADABLE_MANIFEST='{"pages\\\\meet\\\\[id].js -> ../../components/ZegoRoom":{"id":3813,"files":["static/chunks/fdd8909d.bfdb6b5492f9e491.js","static/chunks/322.a702922603ab470c.js"]}}';

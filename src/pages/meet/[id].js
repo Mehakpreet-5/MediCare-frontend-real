@@ -180,65 +180,213 @@
 
 // // end main codee
 
-import React, { useRef, useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+
+
+
+
+
+// import React, { useRef, useEffect, useState } from 'react';
+// import { useRouter } from 'next/router';
+// import dynamic from 'next/dynamic';
+
+// // Import Zego dynamically (only on the client)
+// const ZegoUIKitPrebuilt = dynamic(
+//   () => import('@zegocloud/zego-uikit-prebuilt'),
+//   { ssr: false }
+// );
+
+// function RoomPage() {
+//     const router = useRouter();
+//     const meetingRef = useRef(null);
+//     const { id } = router.query;
+//     const [isClient, setIsClient] = useState(false);
+
+//     useEffect(() => {
+//         if (typeof window === "undefined" || !router.isReady || !id) return;
+    
+//         const appID = 1445125281;
+//         const serverSecret = "8a98ef3dc3c6de34f376d884dfba3f46";
+//         const userID = Date.now().toString();
+    
+//         const { ZegoUIKitPrebuilt } = require('@zegocloud/zego-uikit-prebuilt'); // Load only in the client
+    
+//         const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, id, userID, "User1");
+//         const zc = ZegoUIKitPrebuilt.create(kitToken);
+    
+//         if (meetingRef.current) {
+//             zc.joinRoom({
+//                 container: meetingRef.current,
+//                 scenario: { mode: ZegoUIKitPrebuilt.GroupCall },
+//                 sharedLinks: [{ name: 'Copy Link', url: `${window.location.origin}/room/${id}` }]
+//             });
+//         }
+//     }, [id, router.isReady]);
+    
+//     const copyRoomId = () => {
+//         if (id) {
+//             navigator.clipboard.writeText(id);
+//             alert(`Room ID: ${id} copied to clipboard!`);
+//         } else {
+//             alert('Room ID is not available to copy!');
+//         }
+//     };
+
+//     return (
+//         <div className="relative w-full h-screen">
+//             <div ref={meetingRef} className='h-full'></div>
+//             {id && (
+//                 <div className="absolute bottom-4 left-4 text-white">
+//                     <p>Share this Room ID: <strong>{id}</strong></p>
+//                 </div>
+//             )}
+//         </div>
+//     );
+// }
+
+// export default RoomPage;
+
+
+
+
+// import React, { useEffect, useRef } from 'react';
+// import { useRouter } from 'next/router';
+// import { ZegoUIKitPrebuilt } from '@zegocloud/zego-uikit-prebuilt';
+
+// const RoomPage = () => {
+//     const { query, isReady } = useRouter();
+//     const meetingRef = useRef(null);
+
+//     useEffect(() => {
+//         if (!isReady || !query.id) return;
+//         const appID = 1154887925;
+//            const serverSecret = "dbcf98e5cba138bfb260627a7a85d01e";
+//         const roomID = query.id;
+//         const userID = String(Math.floor(Math.random() * 10000000));
+//         const userName = "User_" + userID;
+
+//         // ✅ TEST METHOD ONLY - FRONTEND TOKEN
+//         const token = ZegoUIKitPrebuilt.generateKitTokenForTest(
+//             appID,
+//             serverSecret,
+//             roomID,
+//             userID,
+//             userName
+//         );
+
+//         const zc = ZegoUIKitPrebuilt.create(token);
+
+//         zc.joinRoom({
+//             container: meetingRef.current,
+//             scenario: {
+//                 mode: ZegoUIKitPrebuilt.GroupCall
+//             },
+//             sharedLinks: [{
+//                 name: 'Copy Link',
+//                 url: `${window.location.origin}/room/${roomID}`
+//             }]
+//         });
+//     }, [isReady, query.id]);
+
+//     return (
+//         <div className="w-full h-screen relative">
+//             <div ref={meetingRef} className="h-full" />
+//         </div>
+//     );
+// };
+
+// export default RoomPage;
+
+
+
+
+
+
+// pages/meet/[id].js
 import dynamic from 'next/dynamic';
 
-// Import Zego dynamically (only on the client)
-const ZegoUIKitPrebuilt = dynamic(
-  () => import('@zegocloud/zego-uikit-prebuilt'),
-  { ssr: false }
-);
+const ZegoRoom = dynamic(() => import('../../components/ZegoRoom'), {
+    ssr: false, // ⛔ disables server-side rendering
+});
 
-function RoomPage() {
-    const router = useRouter();
-    const meetingRef = useRef(null);
-    const { id } = router.query;
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        if (typeof window === "undefined" || !router.isReady || !id) return;
-    
-        const appID = 1445125281;
-        const serverSecret = "8a98ef3dc3c6de34f376d884dfba3f46";
-        const userID = Date.now().toString();
-    
-        const { ZegoUIKitPrebuilt } = require('@zegocloud/zego-uikit-prebuilt'); // Load only in the client
-    
-        const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, id, userID, "User1");
-        const zc = ZegoUIKitPrebuilt.create(kitToken);
-    
-        if (meetingRef.current) {
-            zc.joinRoom({
-                container: meetingRef.current,
-                scenario: { mode: ZegoUIKitPrebuilt.GroupCall },
-                sharedLinks: [{ name: 'Copy Link', url: `${window.location.origin}/room/${id}` }]
-            });
-        }
-    }, [id, router.isReady]);
-    
-    const copyRoomId = () => {
-        if (id) {
-            navigator.clipboard.writeText(id);
-            alert(`Room ID: ${id} copied to clipboard!`);
-        } else {
-            alert('Room ID is not available to copy!');
-        }
-    };
-
-    return (
-        <div className="relative w-full h-screen">
-            <div ref={meetingRef} className='h-full'></div>
-            {id && (
-                <div className="absolute bottom-4 left-4 text-white">
-                    <p>Share this Room ID: <strong>{id}</strong></p>
-                </div>
-            )}
-        </div>
-    );
+export default function RoomPage() {
+    return <ZegoRoom />;
 }
 
-export default RoomPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useRef, useEffect, useState } from 'react';
+// import { useRouter } from 'next/router';
+// import dynamic from 'next/dynamic';
+
+// // Import Zego dynamically (only on the client)
+// const ZegoUIKitPrebuilt = dynamic(
+//   () => import('@zegocloud/zego-uikit-prebuilt'),
+//   { ssr: false }
+// );
+
+// function RoomPage() {
+//     const router = useRouter();
+//     const meetingRef = useRef(null);
+//     const { id } = router.query;
+//     const [isClient, setIsClient] = useState(false);
+
+//     useEffect(() => {
+//         if (typeof window === "undefined" || !router.isReady || !id) return;
+    
+//         const appID = 1445125281;
+//         const serverSecret = "8a98ef3dc3c6de34f376d884dfba3f46";
+//         const userID = Date.now().toString();
+    
+//         const { ZegoUIKitPrebuilt } = require('@zegocloud/zego-uikit-prebuilt'); // Load only in the client
+    
+//         const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(appID, serverSecret, id, userID, "User1");
+//         const zc = ZegoUIKitPrebuilt.create(kitToken);
+    
+//         if (meetingRef.current) {
+//             zc.joinRoom({
+//                 container: meetingRef.current,
+//                 scenario: { mode: ZegoUIKitPrebuilt.GroupCall },
+//                 sharedLinks: [{ name: 'Copy Link', url: `${window.location.origin}/room/${id}` }]
+//             });
+//         }
+//     }, [id, router.isReady]);
+    
+//     const copyRoomId = () => {
+//         if (id) {
+//             navigator.clipboard.writeText(id);
+//             alert(`Room ID: ${id} copied to clipboard!`);
+//         } else {
+//             alert('Room ID is not available to copy!');
+//         }
+//     };
+
+//     return (
+//         <div className="relative w-full h-screen">
+//             <div ref={meetingRef} className='h-full'></div>
+//             {id && (
+//                 <div className="absolute bottom-4 left-4 text-white">
+//                     <p>Share this Room ID: <strong>{id}</strong></p>
+//                 </div>
+//             )}
+//         </div>
+//     );
+// }
+
+// export default RoomPage;
+
+
 
 // import React, { useEffect, useRef } from "react";
 // import { useRouter } from "next/router";
