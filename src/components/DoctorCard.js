@@ -130,14 +130,14 @@ function Doctors() {
   const selectedCategoryData = doctorData.find(category => category.category === selectedCategory);
 
   return (
-    <div className="lg:p-4 pt-10 lg:pt-0 bg-orange-200 bg-opacity-20">
+    <div className="lg:p-4 pt-10 lg:pt-5 bg-orange-200 bg-opacity-20">
       <div
         className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:flex lg:flex-wrap justify-center gap-8 p-4"
       >
         {doctorData.map((categoryData, index) => (
           <div key={index} className="flex flex-col items-center">
             <div
-              className={`w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 flex items-center justify-center rounded-full border border-gray-400 bg-white shadow-md transition transform duration-300 cursor-pointer hover:scale-105
+              className={`w-20 h-20 sm:w-24 sm:h-24 lg:w-24 lg:h-24 flex items-center justify-center rounded-full border border-gray-400 bg-white shadow-md transition transform duration-300 cursor-pointer hover:scale-105
               ${selectedCategory === categoryData.category ? "border-yellow-500 shadow-lg" : ""}`}
               onClick={() => handleCategoryClick(categoryData.category)}
             >
@@ -157,26 +157,26 @@ function Doctors() {
         <div className="mt-16 px-4 md:px-6 mb-10 lg:ml-24" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1200">
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {selectedCategoryData.doctors.map((doctor, docIndex) => (
-              <li key={docIndex} className="bg-white bg-opacity-90 min-w-full sm:min-w-80 lg:max-w-md p-4 sm:p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-                <div className="flex flex-row  items-start sm:space-x-6 lg:space-y-4 space-y-0">
+              <li key={docIndex} className="bg-white bg-opacity-90 min-w-full sm:min-w-full lg:max-w-sm px-1 sm:p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+                <div className="flex flex-row  items-start sm:space-x-6 lg:space-y-4 lg:h-40 h-44 space-y-0">
                   <Image
                     src={doctor.image || '/default-doctor-image.jpg'}
                     alt={doctor.name}
                     width={100}
                     height={100}
-                    className="w-28 h-36 sm:w-32 sm:h-40 lg:w-36 lg:h-44 rounded-lg object-cover shadow-md"
+                    className="w-28 h-36 sm:w-32 sm:h-40 lg:w-32 mt-4 lg:mt-0 lg:h-40 rounded-lg object-cover shadow-md"
                   />
-                  <div className="flex-1 ml-3 lg:ml-0 sm:text-left">
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
+                  <div className="flex-1 ml-3 lg:ml-0 sm:text-left  ">
+                    <h3 className="text-lg mt-4 lg:mt-0 sm:text-xl font-semibold text-gray-800">
                       {doctor.name}
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-600 mt-1">
+                    <p className="text-sm sm:text-sm text-gray-600 mt-1">
                       <strong>Specialization:</strong> {doctor.specialization}
                     </p>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-sm text-gray-600">
                       <strong>Experience:</strong> {doctor.experience}
                     </p>
-                    <p className="text-sm sm:text-base text-gray-600">
+                    <p className="text-sm sm:text-sm text-gray-600">
                       <strong>Availability:</strong> {doctor.availability}
                     </p>
                   </div>
@@ -192,7 +192,7 @@ function Doctors() {
                       },
                     }}
                   >
-                    <h2 className='rounded-full border border-gray-500 px-2 lg:px-3 py-0 lg:py-1 mt-28 lg:mt-32 bg-orange-100 hover:bg-orange-200 cursor-pointer active:bg-orange-300 active:scale-95 text-xl sm:text-2xl'>
+                    <h2 className='rounded-full border border-gray-500 px-2 lg:px-2 py-0 lg:py-0 mt-32 mr-5 lg:mr-0 lg:mt-28 bg-orange-100 hover:bg-orange-200 cursor-pointer active:bg-orange-300 active:scale-95 text-xl sm:text-2xl'>
                       +
                     </h2>
                   </Link>

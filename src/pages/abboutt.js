@@ -21,11 +21,11 @@ function About() {
       <div className="pt-20 pb-20 px-6 bg-orange-200 bg-opacity-15  flex justify-center items-center">
         <div className="grid grid-cols-1 gap-14 md:grid-cols-3" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1200">
           {/* Card 1 */}
-          <div className="text-center border-2 border-green-800 w-64 h-64 lg:h-72 lg:w-72 bg-transparent shadow-lg rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl">
+          <div className="text-center border-2 border-green-800 w-64 h-64 lg:h-64 lg:w-72  bg-transparent shadow-lg rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl">
             <Image
               src={search}
               alt="Find Best Doctors"
-              className="rounded-full h-24 w-24 lg:h-24 lg:w-24  mx-auto mt-8 mb-4"
+              className="rounded-full h-24 w-24 lg:h-20 lg:w-20  mx-auto mt-8 mb-4"
             />
             <h2 className="textg text-lg lg:text-2xl font-semibold mb-2">
               Find Best Doctors
@@ -36,11 +36,11 @@ function About() {
           </div>
 
           {/* Card 2 */}
-          <div className="text-center border-2 border-green-800 w-64 h-64 lg:h-72 lg:w-72 shadow-lg rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl">
+          <div className="text-center border-2 border-green-800 w-64 h-64 lg:h-64 lg:w-72 shadow-lg rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl">
             <Image
               src={appointment}
               alt="Get Appointment"
-              className="rounded-full h-24 w-24 mx-auto mt-8 mb-4"
+              className="rounded-full h-24 w-24 lg:h-20 lg:w-20  mx-auto mt-8 mb-4"
             />
             <h2 className="textg text-lg lg:text-2xl  font-semibold mb-2">
               Get Appointment
@@ -51,11 +51,11 @@ function About() {
           </div>
 
           {/* Card 3 */}
-          <div className="text-center border-2 border-green-800 w-64 h-64 lg:h-72 lg:w-72 shadow-lg rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl">
+          <div className="text-center border-2 border-green-800 w-64 h-64 lg:h-64 lg:w-72 shadow-lg rounded-lg transform transition-all hover:scale-105 hover:shadow-2xl">
             <Image
               src={Consultation}
               alt="Happy Consultation"
-              className="rounded-full h-24 w-24 mx-auto mt-8 mb-4"
+              className="rounded-full h-24 w-24 lg:h-20 lg:w-20  mx-auto mt-8 mb-4"
             />
             <h2 className="textg text-lg lg:text-2xl  font-semibold mb-2">
               Happy Consultation
@@ -71,60 +71,73 @@ function About() {
 
     
 
-<div className="p-10 flex flex-row bg-orange-200 bg-opacity-15 ">
+<div className=" flex flex-row bg-orange-200 bg-opacity-15 ">
   {/* Left Section */}
-  <div className="w-5/12 ml-40 relative pb-10 hidden sm:block">
+  <div className="w-5/12 ml-32 relative pb-10 hidden sm:block md:block">
     {/* Main rabk image */}
     <Image 
       src={rabk} 
       alt='pic1'
-      className="h-full w-full ml-0 mt-5 px-2 opacity-80 relative" 
+      className="h-full w-full ml-0 mt-1 px-4 py-16 opacity-80 relative" 
     />
     
-    <Image 
-      src={dot} 
-      alt='pic2'
-      className="h-96 p-4 w-7/12 object-cover absolute top-40 left-32 " 
-    />
-    <Image 
-      src={pp2} 
-        alt='pic2'
-      className="h-4/6 w-56 py-5 object-cover absolute top-52 left-20 rounded-full" 
-    />
-    <Image 
-      src={pp1}
-      alt='pic3' 
-      className="h-4/6 w-64 py-5 object-cover absolute -top-6 left-80 pl-7 rounded-full" 
-    /> 
-    <Image 
-      src={pp3} 
-        alt='pic4'
-      className="h-48 w-80 object-cover absolute bottom-11 left-80 pl-7 rounded-full" 
-    />
-  </div>
+   {/* Dot Image – no shine effect */}
+<Image 
+  src={dot} 
+  alt="pic2"
+  className="h-96 p-4 w-7/12 object-cover absolute top-40 left-32" 
+/>
+
+{/* Girl Image */}
+<div className="shine-wrapper h-96 w-52 absolute top-52 left-20">
+  <Image 
+    src={pp2} 
+    alt="pic2"
+    className="h-full w-full py-1 object-cover rounded-full" 
+  />
+</div>
+
+{/* Dr Image */}
+<div className="shine-wrapper h-96 w-60 absolute top-12 left-72 pl-9">
+  <Image 
+    src={pp1} 
+    alt="pic3"
+    className="h-full w-full py-2 object-cover rounded-full" 
+  />
+</div>
+
+{/* Small Image */}
+<div className="shine-wrapper h-40 w-64 absolute bottom-24 left-80 pl-1">
+  <Image 
+    src={pp3} 
+    alt="pic4"
+    className="h-full w-full object-cover rounded-full" 
+  />
+</div>
+</div>
 
   {/* Right Section */}
-  <div className="flex flex-col w-full lg:w-2/6 lg:ml-14 mt-10 ">
-          <h1 className="text-2xl font-semibold uppercase text-orange-300 mb-2">About Medicalife</h1>
-          <h2 className="text-5xl font-medium textg mb-8 ">Our Best Services & Popular Treatment Here.</h2>
-          <p className="text-gray-500 text-xl mb-8 w-11/12 pr-3">We take pride in offering a wide range of best-in-class medical services and popular treatments to cater to your diverse healthcare needs.
+  <div className="flex flex-col w-full lg:w-3/6 ml-10 lg:ml-14 mt-20 ">
+          <h1 className="text-lg lg:text-xl font-semibold uppercase text-orange-300 mb-2">About Medicalife</h1>
+          <h2 className="text-3xl lg:text-5xl font-semibold textg mb-5 ">Our Best Services & <br/> Popular Treatment Here.</h2>
+          <p className="text-gray-500 lg:text-lg mb-4 w-10/12 pr-40">We take pride in offering a wide range of best-in-class medical services and popular treatments to cater to your diverse healthcare needs.
           Our team of highly skilled professionals is committed to providing personalized and effective care .</p>
-          <ul className="space-y-4 text-xl font-semibold text-orange-300">
+          <ul className="space-y-4 text-lg font-semibold text-orange-300">
             <li className="flex items-center">
-              <svg className="w-7 h-7 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg className="w-6 h-7 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               <span className="text-gray-800">Mental Health Solutions</span>
             </li>
             <li className="flex items-center">
-              <svg className="w-7 h-7 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg className="w-6 h-7 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               <span className="text-gray-800">Rapid Patient Improvement</span>
             </li>
             <li className="flex items- center">
-              <svg className="w-7 h-7  mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              <svg className="w-6 h-7  mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               <span className="text-gray-800">World Class Treatment</span>
             </li>
           </ul>
-          <div className="mt-8">
-            <Link href="/about" className=" text-orange-300 border-2 border-orange-300 text-lg font-semibold px-4 py-2 rounded-full hover:bg-orange-300 hover:text-white">Read More <FontAwesomeIcon icon={faArrowRight} className='ml-2' /></Link>
+          <div className="mt-6">
+            <Link href="/about" className=" text-orange-300 border-2 border-orange-300 text-sm lg:text-base font-semibold px-4 py-2 rounded-full hover:bg-orange-300 hover:text-white">Read More <FontAwesomeIcon icon={faArrowRight} className='ml-2' /></Link>
           </div>
         </div>
 </div>

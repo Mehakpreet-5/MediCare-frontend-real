@@ -40,7 +40,7 @@ function Navbar() {
     <div className="lg:flex lg:pt-5 w-full greenn text-gray-300 border border-gray-400 border-opacity-15 justify-between items-center px-6 py-4 relative">
       {/* Logo */}
       <div className="flex flex-row justify-between">
-        <h1 className="text-4xl lg:ml-60">
+        <h1 className="text-3xl lg:ml-60">
           <span className="text-orange-300">Medi</span>
           <span className="text-white">Care</span>
         </h1>
@@ -104,7 +104,7 @@ function Navbar() {
 
       {/* Booking button for large screens */}
       <div className="flex space-x-6 mr-60">
-        <div className="hidden sm:block lg:text-xl mt-1 p-2 w-28 lg:w-40 text-center rounded-full border-2 border-orange-300  text-orange-300 hover:bg-opacity-75 transition">
+        <div className="hidden sm:block lg:text-lg mt-1 py-1 w-28 lg:w-36 text-center rounded-full border-2 border-orange-300  text-orange-300 hover:bg-opacity-75 transition">
           <Link href="/Appointment">Appointment</Link>
         </div>
       </div>

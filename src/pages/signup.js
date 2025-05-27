@@ -52,15 +52,15 @@ const SignupForm = () => {
     <div className="flex justify-center items-center h-screen bg-gradient-to-r from-cyan-100 to-white">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-transparent p-4 px-11 rounded shadow-md shadow-slate-500 lg:w-1/4 lg:h-3/5 w-96 ml-0"
+        className="bg-transparent p-4 px-11 rounded shadow-xl shadow-slate-500 lg:w-2/6 lg:h-4/6 w-96 ml-0"
       >
-        <h2 className="text-2xl lg:text-5xl lg:mt-5 lg:font-serif mb-6 text-center">Sign Up</h2>
+        <h2 className="text-2xl lg:text-5xl lg:mt-4 lg:font-serif mb-3 text-center">Sign Up</h2>
 
         {signupSuccess && (
           <p className="text-green-500 text-center mb-4">Signup successful! Redirecting...</p>
         )}
 
-        <div className="mb-4 mt-14">
+        <div className="mb-4 mt-10">
           <label htmlFor="username" className="block mb-2 lg:text-2xl">
             Username
           </label>

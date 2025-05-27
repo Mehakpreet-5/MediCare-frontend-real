@@ -12,8 +12,8 @@ const ZegoRoom = () => {
     useEffect(() => {
         if (!isReady || !query.id) return;
 
-        const appID = 1154887925;
-        const serverSecret = "dbcf98e5cba138bfb260627a7a85d01e";
+        const appID = 1952300290;
+        const serverSecret = "e247163a3f02fbae0a09293e5fdd1507";
         const roomID = query.id;
         const userID = String(Math.floor(Math.random() * 10000000));
         const userName = "User_" + userID;

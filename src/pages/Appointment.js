@@ -272,33 +272,33 @@ const Appointments = () => {
         <Navbar className='fixed top-0 w-full bg-white shadow-md' />
 
         <div className="pt-0  mr-28  ">
-          <div className='relative pb-44 mr-24 lg:mr-80 mt-6  w-full h-screen flex justify-end items-center'
+          <div className='relative pb-44 mr-24 lg:mr-72 mt-6  w-full h-screen flex justify-end items-center'
             data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1100">
 
-            <div className=' hidden sm:block md:block absolute  h-[28rem] w-[28rem] lg:h-[34.2rem] lg:w-[34.3rem] orangg rounded-full z-0 right-0'></div>
+            <div className=' hidden sm:block md:block absolute  h-[28rem] w-[28rem] lg:h-[30rem] lg:w-[32rem] orangg rounded-full z-0 right-0'></div>
 
-            <div className=' hidden sm:block md:block absolute h-[27rem] w-[27rem] lg:h-[33rem] lg:w-[33rem] mr-2 rounded-full overflow-hidden shadow-lg '>
+            <div className=' hidden sm:block md:block absolute h-[27rem] w-[27rem] lg:h-[29.2rem] lg:w-[31rem] mr-2 rounded-full overflow-hidden shadow-lg '>
               <Image src={doctorbgg} alt="Description of the image" className="h-full w-full object-cover" />
             </div>
 
-            <div className=' hidden sm:block md:block absolute mt-72 mr-72 lg:mr-80 lg:mt-80 h-[14.5rem] w-[14.5rem] lg:h-[18rem] lg:w-[18rem]  orangg rounded-full clip-half z-0 right-0'></div>
+            <div className=' hidden sm:block md:block absolute mt-72 mr-72 lg:mr-80 lg:mt-80 h-[14.5rem] w-[14.5rem] lg:h-[16rem] lg:w-[16rem]  orangg rounded-full clip-half z-0 right-0'></div>
 
-            <div className=' hidden sm:block md:block absolute mt-72 lg:mt-80 mb-2 ml-5 mr-72 lg:mr-80 h-[14rem] w-[14rem]  lg:h-[17.6rem] lg:w-[17.2rem] rounded-full overflow-hidden shadow-lg '>
+            <div className=' hidden sm:block md:block absolute mt-72 lg:mt-80 mb-2 ml-5 mr-72 lg:mr-80 h-[14rem] w-[14rem]  lg:h-[14.6rem] lg:w-[15.2rem] rounded-full overflow-hidden shadow-lg '>
               <Image src={doctorbgg} alt="Doctor" className="h-full w-full object-cover" />
             </div>
           </div>
 
-          <Image src={icon2} alt="Description of the image" className="absolute inset-0 w-28 lg:w-52 lg:h-52 opacity-50 md:ml-24 mt-20 lg:mt-28" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
+          <Image src={icon2} alt="Description of the image" className="absolute inset-0 w-28 lg:w-48 lg:h-48 opacity-50 md:ml-7 mt-24 lg:mt-28" data-aos="zoom-in" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="2000" />
 
-          <div className='mt-20 lg:ml-20 ml-5 md:ml-52 py-10 absolute inset-0'
+          <div className='mt-20 lg:ml-5 ml-5 md:ml-52 py-10 absolute inset-0'
             data-aos="fade-down" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="1100">
 
             {!showAppointments ? (
-              <form onSubmit={handleMobileSubmit} className="mb-8 lg:ml-48 mt-12 lg:w-3/4">
-                <h1 className="mb-5 fontt text-4xl sm:text-3xl md:text-5xl lg:text-7xl font-serif orangg-text">
+              <form onSubmit={handleMobileSubmit} className="mb-8 ml-16 lg:ml-44 mt-14 lg:mt-28 lg:w-3/4">
+                <h1 className="mb-5 fontt text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-serif orangg-text">
                   Check Appointment
                 </h1>
-                <h1 className="mb-8 fontt text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-300">
+                <h1 className="mb-8 fontt text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-serif text-gray-300">
                   Enter Your Number
                 </h1>
                 <div className="bg-white bg-opacity-20 p-3 lg:ml-2 rounded-lg shadow-lg flex space-x-3 w-80 lg:w-96">
@@ -315,7 +315,7 @@ const Appointments = () => {
                 <div className="relative mt-7 ">
                   <Image src={SubmitImg} alt="Submit" className="h-11 lg:w-52 md:h-11 w-48  ml-16 lg:ml-20 object-cover" />
                   <button
-                    className="absolute inset-0 mr-5 md:mr-96 md:pr-0 text-center  lg:w-80 ml-1 md:ml-6 text-white font-bold text-lg md:text-xl lg:text-2xl"
+                    className="absolute inset-0 mr-20 md:mr-96 md:pr-0 text-center  lg:w-80 ml-1 md:ml-6 text-white font-bold text-lg md:text-xl lg:text-2xl"
                     type="submit"
                   >
                     Submit
@@ -324,7 +324,7 @@ const Appointments = () => {
               </form>
             ) : (
               <>
-                <h2 className='md:text-7xl lg:ml-48 lg:mt-10 text-4xl font-serif orangg-text mb-8'>Your Appointments</h2>
+                <h2 className='md:text-6xl lg:ml-48 lg:mt-28 text-4xl font-serif orangg-text mb-8'>Your Appointments</h2>
                 {filteredAppointments.length > 0 ? (
                   <div className="overflow-x-auto mr-10 md:mr-0 md:pr-4 lg:ml-48">
                   <table className='md:w-96 bg-white bg-opacity-70 rounded-lg shadow-sm shadow-gray-400'

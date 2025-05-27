@@ -38,14 +38,14 @@ const ServicePage = () => {
 <div className="relative">
   {/* <!-- Other Content --> */}
   <div 
-    className="hidden sm:block h-72 mt-4 w-full lg:w-96 border-t-0 border-l-0 border-b-0 bg-orange-300 bg-opacity-10 rounded-r-full absolute -left-3" >
+    className="hidden sm:block h-60 mt-4 w-full lg:w-80 border-t-0 border-l-0 border-b-0 bg-orange-300 bg-opacity-10 rounded-r-full absolute -left-3" >
     {/* // data-aos="fade-up" */}
   </div>
 </div>
 
-      <div className="grid grid-cols-1 gap-4 lg:pl-10 md:grid-cols-2 lg:grid-cols-3 max-w-7xl lg:mx-auto space-y-4 lg:px-3">
+      <div className="grid grid-cols-1 gap-7 lg:pl-10 md:grid-cols-2 lg:grid-cols-3 max-w-7xl lg:mx-auto">
         
-        <div className="mt-24 px-3 w-full md:w-96 ">
+        <div className="mt-20 px-3 w-full md:w-96 ">
           <h1 className="text-orange-300 font-serif text-xl lg:text-3xl">Medical Services</h1>
           <h2 className="textg font-serif text-2xl lg:text-5xl">We&apos;re Providing Best Services.</h2>
         </div>
@@ -53,7 +53,7 @@ const ServicePage = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="relative bg-white border border-green-900 shadow-md lg:pt-6 h-52 lg:h-72 lg:py-8 w-full md:w-96 group overflow-hidden"
+            className="relative bg-white border border-green-900 shadow-md lg:pt-6 h-52 lg:h-64 lg:py-8 w-full md:w-96 group overflow-hidden"
             data-aos="fade-up"
             data-aos-delay="500"
             data-aos-easing="ease-in-out"
@@ -66,11 +66,11 @@ const ServicePage = () => {
             <div className="relative z-10 flex flex-col">
               <div> <FontAwesomeIcon
                 icon={service.icon}
-                className="text-orange-300 mt-3 px-8 lg:mt-6 text-5xl lg:text-6xl lg:mb-4 group-hover:text-white  transition duration-300 ease-in-out"
+                className="text-orange-300 mt-3 px-8 lg:mt-1 text-5xl lg:text-5xl lg:mb-4 group-hover:text-white  transition duration-300 ease-in-out"
               /> </div>
               <div className="ml-5 textg lg:ml-0 mt-3  lg:mt-0 px-1 lg:px-8"> <h2 className="lg:text-3xl text-xl font-semibold mb-2">{service.name}</h2>
-                <p className="text-gray-600 text-base lg:text-lg mb-4 lg:mb-8">{service.description}</p> </div>
-              <div className="lg:h-12 h-10 bg-orange-300 bg-opacity-85 text-white text-xl lg:pt-2 font-sans font-medium group-hover:text-green-950  text-center">    Read More         </div>
+                <p className="text-gray-600 text-base lg:text-lg mb-4 md:mb-8 lg:mb-5">{service.description}</p> </div>
+              <div className="lg:h-11 h-10 bg-orange-300 bg-opacity-85 text-white text-xl lg:pt-2 font-sans font-medium group-hover:text-green-950  text-center">    Read More         </div>
             </div>
           </div>
         ))}

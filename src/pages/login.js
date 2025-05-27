@@ -49,17 +49,17 @@ const LoginForm = () => {
 
   return (
     <div className="flex flex-row  items-center h-screen bg-gradient-to-r from-cyan-100 to-white">
-      <div className="lg:ml-96 lg:w-1/4 lg:h-3/5   ml-0">
+      <div className="lg:ml-60 lg:w-2/6 lg:h-4/6   ml-0">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-transparent p-8 px-16  pt-14 rounded-lg shadow-lg shadow-slate-500 w-96 lg:w-full lg:h-full transition-transform transform hover:scale-105"
+          className="bg-transparent p-8 px-16  pt-10 rounded-lg shadow-lg shadow-slate-500 w-96 lg:w-full lg:h-full transition-transform transform hover:scale-105"
         >
-          <h2 className="text-4xl lg:text-5xl  font-serif mb-10 text-center text-gray-700">Login</h2>
+          <h2 className="text-4xl lg:text-5xl  font-serif mb-6 text-center text-gray-700">Login</h2>
 
           {/* Display login message */}
           {loginMessage && <p className="text-center mb-4 text-red-500">{loginMessage}</p>}
 
-          <div className="mb-6 mt-16">
+          <div className="mb-6 mt-12">
             <label htmlFor="email" className="block mb-2 lg:text-2xl text-gray-600 font-medium">
               Email
             </label>

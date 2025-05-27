@@ -188,7 +188,7 @@ const Faqs = () => {
     <div className="bg-orange-50 bg-opacity-80 min-h-screen">
       <Navbar />
 
-      <div className="h-60 greenn flex flex-col items-center justify-center text-center shadow-md">
+      <div className="h-56 greenn flex flex-col items-center justify-center text-center shadow-md">
         <h2 className="text-6xl font-serif font-semibold text-orange-200" data-aos="fade-down">
         FAQ&apos;s
         </h2>

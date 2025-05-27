@@ -17,7 +17,7 @@ function Doctors() {
   return (
     <div>
       <div><Navbar /></div>
-      <div className='greenn h-60 pb-10' >
+      <div className='greenn h-56 pb-10' >
         <div data-aos="fade-down" data-aos-delay="" data-aos-easing="ease-in-out" data-aos-duration="300">
           <h2 className='text-5xl lg:text-6xl text-center pt-16 font-serif text-orange-200'> All Doctors</h2>
           <h3 className='text-orange-200 lg:text-xl text-center mt-3 text-base space-x-1'>

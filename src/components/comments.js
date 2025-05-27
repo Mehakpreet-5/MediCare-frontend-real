@@ -279,10 +279,10 @@ const Comments = () => {
                 <div className="overflow-hidden mt-12" data-aos="fade-up" data-aos-delay="200" data-aos-easing="ease-in-out" data-aos-duration="900">
                     <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * (100 / (isMobile ? 1 : 3))}%)` }}>
                         {commentData.map((comment) => (
-                            <div key={comment.id} className="min-w-[285px] lg:min-w-[300px] yelll px-7 h-56 mr-3 shadow-lg rounded-lg border border-orange-300 mx-2 flex flex-col justify-center transition-transform duration-300 transform hover:scale-105">
-                                <h2 className="text-3xl lg:text-4xl font-semibold textg">{comment.name}</h2>
+                            <div key={comment.id} className="min-w-[270px] lg:min-w-[258px] yelll px-7 h-52 mr-3 shadow-lg rounded-lg border border-orange-300 mx-2 flex flex-col justify-center transition-transform duration-300 transform hover:scale-105">
+                                <h2 className="text-3xl lg:text-3xl font-semibold textg">{comment.name}</h2>
                                 <div className="flex lg:text-2xl mt-1 mb-2">{renderStars(comment.rating)}</div>
-                                <p className="text-gray-600 lg:text-lg mt-2">{comment.comment}</p>
+                                <p className="text-gray-600 lg:text-base mt-2">{comment.comment}</p>
                             </div>
                         ))}
                     </div>
